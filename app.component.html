@@ -1,0 +1,21 @@
+
+<h1>Todos list</h1>
+<div>
+  
+<input [(ngModel)]="addTodoTitle" type="text" 
+                        >
+  
+            <div class="col-1"></div>
+  
+            <button (click)="addToList()" 
+                class="btn btn-light text-success">
+                ADD TASK
+            </button>
+        </div>
+        
+<ul>
+    <li *ngFor="let todo of todos" >
+{{todo.title}} 
+<button (click)="deleteTodo(todo.id)">x</button>
+</li>
+</ul> 
